@@ -1,0 +1,53 @@
+{
+    "name": "postmypost/php-rest-sdk",
+    "description": "OpenAPI-based SDK for integrating with Postmypost REST API. Official, secure, and fully compliant integrations for social media automation, content scheduling, analytics, and more.",
+    "version": "1.0.0",
+    "keywords": [
+        "postmypost",
+        "smm",
+        "social-media",
+        "api",
+        "openapi",
+        "sdk",
+        "rest",
+        "integration",
+        "automation",
+        "instagram",
+        "facebook",
+        "telegram",
+        "vkontakte",
+        "tiktok"
+    ],
+    "homepage": "https://postmypost.io",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Postmypost Team",
+            "homepage": "https://postmypost.io",
+            "email": "support@postmypost.io"
+        }
+    ],
+    "support": {
+        "email": "support@postmypost.io",
+        "issues": "https://github.com/postmypost/php-rest-sdk/issues",
+        "source": "https://github.com/postmypost/php-rest-sdk"
+    },
+    "require": {
+        "php": "^7.4 || ^8.0",
+        "ext-curl": "*",
+        "ext-json": "*",
+        "ext-mbstring": "*",
+        "guzzlehttp/guzzle": "^7.3",
+        "guzzlehttp/psr7": "^1.7 || ^2.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^8.0 || ^9.0",
+        "friendsofphp/php-cs-fixer": "^3.5"
+    },
+    "autoload": {
+        "psr-4": { "Postmypost\\RestSdk\\" : "lib/" }
+    },
+    "autoload-dev": {
+        "psr-4": { "Postmypost\\RestSdk\\Test\\" : "test/" }
+    }
+}

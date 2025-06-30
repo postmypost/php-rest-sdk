@@ -1,0 +1,53 @@
+# Composer
+composer.phar
+/vendor/
+
+/composer.lock # Уберите комментарий, если не хотите коммитить лок-файл
+
+# PhpStorm и JetBrains IDE
+.idea/
+
+# Кэш PHP-CS-Fixer
+.php_cs.cache
+.php-cs-fixer.cache
+
+# PHPUnit
+.phpunit.result.cache
+phpunit.xml
+phpunit.xml.dist
+
+# Кэш файлов и логи
+*.log
+/cache/
+/tmp/
+/build/
+/coverage/
+
+# MacOS
+.DS_Store
+
+# Linux
+*~
+
+# node.js (если используется фронтенд)
+node_modules/
+
+# Деплой-файлы и окружение
+.env
+.env.local
+.env.*
+.env.*.local
+
+# Другие IDE
+*.iml
+.vscode/
+
+# Служебные/временные файлы
+*.bak
+*.swp
+*.swo
+
+# Файлы тестового покрытия
+coverage.xml
+clover.xml
+coverage/
