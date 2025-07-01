@@ -81,9 +81,9 @@ class UploadInitOneOf1FieldsInnerTest extends TestCase
     }
 
     /**
-     * Test attribute "name"
+     * Test attribute "key"
      */
-    public function testPropertyName()
+    public function testPropertyKey()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

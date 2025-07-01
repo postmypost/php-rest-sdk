@@ -198,7 +198,7 @@ try {
 ## `getPublications()`
 
 ```php
-getPublications($project_id, $post_date, $sort, $page, $per_page): \Postmypost\RestSdk\Model\ChannelsResponse
+getPublications($project_id, $post_date, $sort, $page, $per_page): \Postmypost\RestSdk\Model\PublicationsResponse
 ```
 
 Get list of publications
@@ -248,7 +248,7 @@ try {
 
 ### Return type
 
-[**\Postmypost\RestSdk\Model\ChannelsResponse**](../Model/ChannelsResponse.md)
+[**\Postmypost\RestSdk\Model\PublicationsResponse**](../Model/PublicationsResponse.md)
 
 ### Authorization
 

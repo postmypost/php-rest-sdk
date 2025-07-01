@@ -90,9 +90,18 @@ class UploadInitTest extends TestCase
     }
 
     /**
-     * Test attribute "size"
+     * Test attribute "name"
      */
-    public function testPropertySize()
+    public function testPropertyName()
+    {
+        // TODO: implement
+        self::markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test attribute "url"
+     */
+    public function testPropertyUrl()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
@@ -108,9 +117,9 @@ class UploadInitTest extends TestCase
     }
 
     /**
-     * Test attribute "name"
+     * Test attribute "size"
      */
-    public function testPropertyName()
+    public function testPropertySize()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');

@@ -1648,7 +1648,7 @@ class PublicationsApi
      *
      * @throws \Postmypost\RestSdk\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Postmypost\RestSdk\Model\ChannelsResponse|\Postmypost\RestSdk\Model\BadRequestError|\Postmypost\RestSdk\Model\UnauthorizedError|\Postmypost\RestSdk\Model\ForbiddenError|\Postmypost\RestSdk\Model\NotFoundError|\Postmypost\RestSdk\Model\UnprocessableEntityError
+     * @return \Postmypost\RestSdk\Model\PublicationsResponse|\Postmypost\RestSdk\Model\BadRequestError|\Postmypost\RestSdk\Model\UnauthorizedError|\Postmypost\RestSdk\Model\ForbiddenError|\Postmypost\RestSdk\Model\NotFoundError|\Postmypost\RestSdk\Model\UnprocessableEntityError
      */
     public function getPublications($project_id, $post_date = null, $sort = null, $page = 1, $per_page = 20, string $contentType = self::contentTypes['getPublications'][0])
     {
@@ -1670,7 +1670,7 @@ class PublicationsApi
      *
      * @throws \Postmypost\RestSdk\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Postmypost\RestSdk\Model\ChannelsResponse|\Postmypost\RestSdk\Model\BadRequestError|\Postmypost\RestSdk\Model\UnauthorizedError|\Postmypost\RestSdk\Model\ForbiddenError|\Postmypost\RestSdk\Model\NotFoundError|\Postmypost\RestSdk\Model\UnprocessableEntityError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Postmypost\RestSdk\Model\PublicationsResponse|\Postmypost\RestSdk\Model\BadRequestError|\Postmypost\RestSdk\Model\UnauthorizedError|\Postmypost\RestSdk\Model\ForbiddenError|\Postmypost\RestSdk\Model\NotFoundError|\Postmypost\RestSdk\Model\UnprocessableEntityError, HTTP status code, HTTP response headers (array of strings)
      */
     public function getPublicationsWithHttpInfo($project_id, $post_date = null, $sort = null, $page = 1, $per_page = 20, string $contentType = self::contentTypes['getPublications'][0])
     {
@@ -1713,11 +1713,11 @@ class PublicationsApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Postmypost\RestSdk\Model\ChannelsResponse' === '\SplFileObject') {
+                    if ('\Postmypost\RestSdk\Model\PublicationsResponse' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Postmypost\RestSdk\Model\ChannelsResponse' !== 'string') {
+                        if ('\Postmypost\RestSdk\Model\PublicationsResponse' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -1735,7 +1735,7 @@ class PublicationsApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Postmypost\RestSdk\Model\ChannelsResponse', []),
+                        ObjectSerializer::deserialize($content, '\Postmypost\RestSdk\Model\PublicationsResponse', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -1876,7 +1876,7 @@ class PublicationsApi
                     ];
             }
 
-            $returnType = '\Postmypost\RestSdk\Model\ChannelsResponse';
+            $returnType = '\Postmypost\RestSdk\Model\PublicationsResponse';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -1909,7 +1909,7 @@ class PublicationsApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Postmypost\RestSdk\Model\ChannelsResponse',
+                        '\Postmypost\RestSdk\Model\PublicationsResponse',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -2001,7 +2001,7 @@ class PublicationsApi
      */
     public function getPublicationsAsyncWithHttpInfo($project_id, $post_date = null, $sort = null, $page = 1, $per_page = 20, string $contentType = self::contentTypes['getPublications'][0])
     {
-        $returnType = '\Postmypost\RestSdk\Model\ChannelsResponse';
+        $returnType = '\Postmypost\RestSdk\Model\PublicationsResponse';
         $request = $this->getPublicationsRequest($project_id, $post_date, $sort, $page, $per_page, $contentType);
 
         return $this->client

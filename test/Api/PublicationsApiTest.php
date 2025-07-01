@@ -73,12 +73,12 @@ class PublicationsApiTest extends TestCase
     }
 
     /**
-     * Test case for createPublications
+     * Test case for createPublication
      *
      * Create publication.
      *
      */
-    public function testCreatePublications()
+    public function testCreatePublication()
     {
         // TODO: implement
         self::markTestIncomplete('Not implemented');
