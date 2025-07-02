@@ -59,8 +59,8 @@ class UploadInitOneOf implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPITypes = [
         'id' => 'int',
-        'name' => 'string',
         'url' => 'string',
+        'size' => 'int',
         'status' => '\Postmypost\RestSdk\Model\UploadStatusEnum'
     ];
 
@@ -73,8 +73,8 @@ class UploadInitOneOf implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static $openAPIFormats = [
         'id' => null,
-        'name' => null,
         'url' => null,
+        'size' => null,
         'status' => null
     ];
 
@@ -85,8 +85,8 @@ class UploadInitOneOf implements ModelInterface, ArrayAccess, \JsonSerializable
       */
     protected static array $openAPINullables = [
         'id' => false,
-        'name' => false,
         'url' => false,
+        'size' => false,
         'status' => false
     ];
 
@@ -177,8 +177,8 @@ class UploadInitOneOf implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $attributeMap = [
         'id' => 'id',
-        'name' => 'name',
         'url' => 'url',
+        'size' => 'size',
         'status' => 'status'
     ];
 
@@ -189,8 +189,8 @@ class UploadInitOneOf implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $setters = [
         'id' => 'setId',
-        'name' => 'setName',
         'url' => 'setUrl',
+        'size' => 'setSize',
         'status' => 'setStatus'
     ];
 
@@ -201,8 +201,8 @@ class UploadInitOneOf implements ModelInterface, ArrayAccess, \JsonSerializable
      */
     protected static $getters = [
         'id' => 'getId',
-        'name' => 'getName',
         'url' => 'getUrl',
+        'size' => 'getSize',
         'status' => 'getStatus'
     ];
 
@@ -264,8 +264,8 @@ class UploadInitOneOf implements ModelInterface, ArrayAccess, \JsonSerializable
     public function __construct(array $data = null)
     {
         $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('name', $data ?? [], null);
         $this->setIfExists('url', $data ?? [], null);
+        $this->setIfExists('size', $data ?? [], null);
         $this->setIfExists('status', $data ?? [], null);
     }
 
@@ -299,11 +299,11 @@ class UploadInitOneOf implements ModelInterface, ArrayAccess, \JsonSerializable
         if ($this->container['id'] === null) {
             $invalidProperties[] = "'id' can't be null";
         }
-        if ($this->container['name'] === null) {
-            $invalidProperties[] = "'name' can't be null";
-        }
         if ($this->container['url'] === null) {
             $invalidProperties[] = "'url' can't be null";
+        }
+        if ($this->container['size'] === null) {
+            $invalidProperties[] = "'size' can't be null";
         }
         if ($this->container['status'] === null) {
             $invalidProperties[] = "'status' can't be null";
@@ -351,33 +351,6 @@ class UploadInitOneOf implements ModelInterface, ArrayAccess, \JsonSerializable
     }
 
     /**
-     * Gets name
-     *
-     * @return string
-     */
-    public function getName()
-    {
-        return $this->container['name'];
-    }
-
-    /**
-     * Sets name
-     *
-     * @param string $name File name
-     *
-     * @return self
-     */
-    public function setName($name)
-    {
-        if (is_null($name)) {
-            throw new \InvalidArgumentException('non-nullable name cannot be null');
-        }
-        $this->container['name'] = $name;
-
-        return $this;
-    }
-
-    /**
      * Gets url
      *
      * @return string
@@ -400,6 +373,33 @@ class UploadInitOneOf implements ModelInterface, ArrayAccess, \JsonSerializable
             throw new \InvalidArgumentException('non-nullable url cannot be null');
         }
         $this->container['url'] = $url;
+
+        return $this;
+    }
+
+    /**
+     * Gets size
+     *
+     * @return int
+     */
+    public function getSize()
+    {
+        return $this->container['size'];
+    }
+
+    /**
+     * Sets size
+     *
+     * @param int $size File size in bytes
+     *
+     * @return self
+     */
+    public function setSize($size)
+    {
+        if (is_null($size)) {
+            throw new \InvalidArgumentException('non-nullable size cannot be null');
+        }
+        $this->container['size'] = $size;
 
         return $this;
     }
