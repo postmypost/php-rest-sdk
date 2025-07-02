@@ -15,6 +15,9 @@ Name | Type | Description | Notes
 **tiktok_stitch** | **bool** | Allow stitch on TikTok | [optional]
 **tiktok_privacy_status** | [**\Postmypost\RestSdk\Model\PublicationDetailTikTokPrivacyStatusEnum**](PublicationDetailTikTokPrivacyStatusEnum.md) |  | [optional]
 **youtube_privacy_status** | [**\Postmypost\RestSdk\Model\PublicationDetailYouTubePrivacyStatusEnum**](PublicationDetailYouTubePrivacyStatusEnum.md) |  | [optional]
+**x_reply_settings** | [**\Postmypost\RestSdk\Model\PublicationDetailXReplySettingsEnum**](PublicationDetailXReplySettingsEnum.md) |  | [optional]
+**instagram_share_to_feed** | **bool** | Share to Instagram feed | [optional]
+**nsfw** | **bool** | Not safe for work flag | [optional]
 **file_ids** | **int[]** | File IDs | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)
