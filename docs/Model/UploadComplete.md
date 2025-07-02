@@ -5,6 +5,6 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** | Upload ID |
-**status** | [**\Postmypost\RestSdk\Model\UploadStatusEnum**](UploadStatusEnum.md) |  | [optional]
+**status** | [**\Postmypost\RestSdk\Model\UploadStatusEnum**](UploadStatusEnum.md) |  |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

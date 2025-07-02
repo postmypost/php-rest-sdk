@@ -5,10 +5,10 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** | Upload ID |
-**name** | **string** | File name |
 **url** | **string** | URL to the uploaded file |
-**status** | [**\Postmypost\RestSdk\Model\UploadStatusEnum**](UploadStatusEnum.md) |  |
 **size** | **int** | File size in bytes |
+**status** | [**\Postmypost\RestSdk\Model\UploadStatusEnum**](UploadStatusEnum.md) |  |
+**name** | **string** | File name |
 **action** | **string** | Upload URL |
 **fields** | [**\Postmypost\RestSdk\Model\UploadInitOneOf1FieldsInner[]**](UploadInitOneOf1FieldsInner.md) | Parameters to be sent with the file upload |
 

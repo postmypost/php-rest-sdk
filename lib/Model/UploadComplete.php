@@ -285,6 +285,9 @@ class UploadComplete implements ModelInterface, ArrayAccess, \JsonSerializable
         if ($this->container['id'] === null) {
             $invalidProperties[] = "'id' can't be null";
         }
+        if ($this->container['status'] === null) {
+            $invalidProperties[] = "'status' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -330,7 +333,7 @@ class UploadComplete implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Gets status
      *
-     * @return \Postmypost\RestSdk\Model\UploadStatusEnum|null
+     * @return \Postmypost\RestSdk\Model\UploadStatusEnum
      */
     public function getStatus()
     {
@@ -340,7 +343,7 @@ class UploadComplete implements ModelInterface, ArrayAccess, \JsonSerializable
     /**
      * Sets status
      *
-     * @param \Postmypost\RestSdk\Model\UploadStatusEnum|null $status status
+     * @param \Postmypost\RestSdk\Model\UploadStatusEnum $status status
      *
      * @return self
      */
