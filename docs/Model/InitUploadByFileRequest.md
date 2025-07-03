@@ -1,4 +1,4 @@
-# # InitUploadRequestOneOf1
+# # InitUploadByFileRequest
 
 ## Properties
 
