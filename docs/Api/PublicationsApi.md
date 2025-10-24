@@ -223,7 +223,7 @@ $apiInstance = new Postmypost\RestSdk\Api\PublicationsApi(
     $config
 );
 $project_id = 56; // int | Project ID
-$post_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Publication date (YYYY-MM-DD)
+$post_date = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | Publication date (YYYY-MM-DD)
 $sort = 'sort_example'; // string | List sorting parameter. Format: `sort=field` — ascending by field, `sort=-field` — descending by field. Multiple fields can be specified separated by a comma: `sort=field,-another_field`.
 $page = 1; // int | Page number (starts from 1).
 $per_page = 20; // int | Number of items per page (maximum 50).

@@ -1,7 +1,7 @@
 {
     "name": "postmypost/php-rest-sdk",
     "description": "OpenAPI-based SDK for integrating with Postmypost REST API. Official, secure, and fully compliant integrations for social media automation, content scheduling, analytics, and more.",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "keywords": [
         "postmypost",
         "smm",
@@ -33,7 +33,7 @@
         "source": "https://github.com/postmypost/php-rest-sdk"
     },
     "require": {
-        "php": "^7.4 || ^8.0",
+        "php": "^8.1",
         "ext-curl": "*",
         "ext-json": "*",
         "ext-mbstring": "*",

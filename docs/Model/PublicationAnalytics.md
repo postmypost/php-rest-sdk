@@ -5,6 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **string** | Publication ID |
+**type** | **string** | Publication Type |
 **external_id** | **string** | Chanel publication ID | [optional]
 **external_url** | **string** | Chanel publication URL |
 **created_at** | **\DateTime** | Post creation date and time |

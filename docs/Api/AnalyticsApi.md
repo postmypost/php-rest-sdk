@@ -37,8 +37,8 @@ $apiInstance = new Postmypost\RestSdk\Api\AnalyticsApi(
 );
 $project_id = 56; // int | Project ID
 $account_id = 'account_id_example'; // string | Account ID
-$date_from = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Start date of the period (YYYY-MM-DD)
-$date_to = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | End date of the period (YYYY-MM-DD)
+$date_from = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | Start date of the period (YYYY-MM-DD)
+$date_to = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | End date of the period (YYYY-MM-DD)
 $metrics = 'metrics_example'; // string | Comma-separated list of metrics (e.g., followers,subscribed)
 
 try {
@@ -79,7 +79,7 @@ try {
 ## `getAnalyticsPublications()`
 
 ```php
-getAnalyticsPublications($project_id, $account_id, $date_from, $date_to): \Postmypost\RestSdk\Model\PublicationAnalyticsResponse
+getAnalyticsPublications($project_id, $account_id, $date_from, $date_to, $type, $sort, $page, $per_page): \Postmypost\RestSdk\Model\PublicationAnalyticsResponse
 ```
 
 Get publications analytics
@@ -105,11 +105,15 @@ $apiInstance = new Postmypost\RestSdk\Api\AnalyticsApi(
 );
 $project_id = 56; // int | Project ID
 $account_id = 'account_id_example'; // string | Account ID
-$date_from = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | Start date of the period (YYYY-MM-DD)
-$date_to = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | End date of the period (YYYY-MM-DD)
+$date_from = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | Start date of the period (YYYY-MM-DD)
+$date_to = new \DateTime('2013-10-20T19:20:30+01:00'); // \DateTime | End date of the period (YYYY-MM-DD)
+$type = 'type_example'; // string | Publication Type
+$sort = 'sort_example'; // string | List sorting parameter. Format: `sort=field` — ascending by field, `sort=-field` — descending by field. Multiple fields can be specified separated by a comma: `sort=field,-another_field`.
+$page = 1; // int | Page number (starts from 1).
+$per_page = 20; // int | Number of items per page (maximum 50).
 
 try {
-    $result = $apiInstance->getAnalyticsPublications($project_id, $account_id, $date_from, $date_to);
+    $result = $apiInstance->getAnalyticsPublications($project_id, $account_id, $date_from, $date_to, $type, $sort, $page, $per_page);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling AnalyticsApi->getAnalyticsPublications: ', $e->getMessage(), PHP_EOL;
@@ -124,6 +128,10 @@ try {
 | **account_id** | **string**| Account ID | |
 | **date_from** | **\DateTime**| Start date of the period (YYYY-MM-DD) | |
 | **date_to** | **\DateTime**| End date of the period (YYYY-MM-DD) | |
+| **type** | **string**| Publication Type | [optional] |
+| **sort** | **string**| List sorting parameter. Format: &#x60;sort&#x3D;field&#x60; — ascending by field, &#x60;sort&#x3D;-field&#x60; — descending by field. Multiple fields can be specified separated by a comma: &#x60;sort&#x3D;field,-another_field&#x60;. | [optional] |
+| **page** | **int**| Page number (starts from 1). | [optional] [default to 1] |
+| **per_page** | **int**| Number of items per page (maximum 50). | [optional] [default to 20] |
 
 ### Return type
 
