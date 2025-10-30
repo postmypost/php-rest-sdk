@@ -1,6 +1,6 @@
 <?php
 /**
- * PublicationDetailYouTubePrivacyStatusEnum
+ * PublicationAnalyticsTypeEnum
  *
  * PHP version 8.1
  *
@@ -31,24 +31,24 @@ namespace Postmypost\RestSdk\Model;
 use \Postmypost\RestSdk\ObjectSerializer;
 
 /**
- * PublicationDetailYouTubePrivacyStatusEnum Class Doc Comment
+ * PublicationAnalyticsTypeEnum Class Doc Comment
  *
  * @category Class
- * @description YouTube publication privacy: 1 — public, 2 — unlisted, 3 — private
+ * @description Publication Type: 1 — post, 3 — story, 4 — reels/shorts
  * @package  Postmypost\RestSdk
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
-class PublicationDetailYouTubePrivacyStatusEnum
+class PublicationAnalyticsTypeEnum
 {
     /**
      * Possible values of this enum
      */
-    public const _PUBLIC = 1;
+    public const TYPE_POST = 1;
 
-    public const UNLISTED = 2;
+    public const TYPE_STORY = 3;
 
-    public const _PRIVATE = 3;
+    public const TYPE_REELS = 4;
 
     /**
      * Gets allowable values of the enum
@@ -57,9 +57,9 @@ class PublicationDetailYouTubePrivacyStatusEnum
     public static function getAllowableEnumValues()
     {
         return [
-            self::_PUBLIC,
-            self::UNLISTED,
-            self::_PRIVATE
+            self::TYPE_POST,
+            self::TYPE_STORY,
+            self::TYPE_REELS
         ];
     }
 }
